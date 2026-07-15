@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome để dùng các icon play, pause, next, prev -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="player">
+        <!-- Đĩa nhạc xoay tròn -->
+        <div class="dashboard">
+            <header>
+                <h4>Đang phát:</h4>
+                <h2 id="song-title">Tên bài hát</h2>
+            </header>
+            <div class="cd">
+                <div class="cd-thumb" style="background-image: url('https://picsum.photos/200')"></div>
+            </div>
+        </div>
+
+        <!-- Thanh điều khiển -->
+        <div class="control">
+            <button class="btn btn-prev"><i class="fas fa-step-backward"></i></button>
+            <button class="btn btn-toggle-play">
+                <i class="fas fa-play icon-play"></i>
+                <i class="fas fa-pause icon-pause" style="display: none;"></i>
+            </button>
+            <button class="btn btn-next"><i class="fas fa-step-forward"></i></button>
+        </div>
+
+        <!-- Thanh tiến trình (Seekbar) -->
+        <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+        <!-- Thẻ audio ẩn để xử lý nhạc -->
+        <audio id="audio" src=""></audio>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
